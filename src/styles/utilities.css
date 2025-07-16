@@ -1,0 +1,94 @@
+
+/* Utility classes */
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 dark:bg-black/80 backdrop-blur-md border border-white/20 dark:border-white/10;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .dark-card {
+    @apply bg-card border border-border;
+  }
+  
+  .dark-glass {
+    @apply bg-black/40 backdrop-blur-md border border-white/10;
+  }
+
+  /* Responsive utility classes */
+  .responsive-container {
+    @apply px-4 sm:px-6 md:px-8 max-w-7xl mx-auto w-full;
+  }
+  
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6;
+  }
+  
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row gap-4 md:gap-5 lg:gap-6;
+  }
+  
+  .responsive-text {
+    @apply text-sm md:text-base;
+  }
+  
+  .responsive-heading {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+  
+  /* Better container classes for all screen sizes */
+  .content-center {
+    @apply mx-auto;
+    max-width: min(100%, 1400px);
+  }
+  
+  .large-screen-container {
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-8;
+    max-width: min(100%, 1400px);
+  }
+  
+  .large-screen-centered {
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-8;
+    max-width: min(100%, 1600px);
+  }
+  
+  /* Fit screen properly */
+  .fit-screen {
+    @apply w-full max-w-full box-border;
+    min-height: calc(100vh - 64px); /* Account for header height */
+  }
+  
+  .content-wrapper {
+    @apply w-full max-w-full mx-auto;
+  }
+  
+  /* Container that works across all screen sizes */
+  .universal-container {
+    @apply w-full px-4 sm:px-6 lg:px-8 mx-auto;
+    max-width: min(100%, 1600px);
+  }
+  
+  /* Laptop optimized utility classes */
+  .laptop-padding {
+    @apply p-4 md:p-5;
+  }
+  
+  .laptop-container {
+    @apply px-4 md:px-5 mx-auto w-full;
+    max-width: min(100%, 1200px);
+  }
+  
+  .laptop-card {
+    @apply p-4 md:p-5 rounded-lg;
+  }
+  
+  .laptop-gap {
+    @apply gap-4 md:gap-5;
+  }
+  
+  .laptop-spacing {
+    @apply space-y-4 md:space-y-5;
+  }
+}

@@ -1,0 +1,32 @@
+
+/* Component-specific styles */
+@layer base {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+  
+  /* Special styling for reminder dates in calendar */
+  .rdp-day_selected, 
+  .rdp-day_selected:focus-visible, 
+  .rdp-day_selected:hover {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .rdp-day.rdp-day_reminder:not(.rdp-day_selected) {
+    @apply bg-primary/30 text-foreground font-bold;
+  }
+}

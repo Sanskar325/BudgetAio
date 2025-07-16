@@ -1,0 +1,194 @@
+
+/* Responsive styles */
+@layer base {
+  /* Improve responsive behavior on all devices */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  /* Added for extra large screens */
+  @media (min-width: 1440px) {
+    html {
+      font-size: 16px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+  
+  /* Added for super wide screens */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1800px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .rdp {
+    --rdp-cell-size: 35px;
+    margin: 0;
+  }
+  
+  .rdp-caption {
+    padding: 0;
+  }
+}
+
+/* Improved responsive layout adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* Laptop optimizations - new section */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .responsive-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  .universal-container {
+    max-width: 1200px;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1440px) {
+  .responsive-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .grid-layout {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .main-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Fix for all screen sizes to ensure proper padding */
+.full-width-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .full-width-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .full-width-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Center content on all screen sizes */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.universal-container {
+  max-width: 1600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Force center alignment for all dashboard content */
+.dashboard-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure all grid items fill available space */
+.grid {
+  width: 100%;
+}
+
+/* Minimize vertical spacing throughout the app */
+.space-y-4 > * + * {
+  margin-top: 0.75rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.25rem !important;
+}
+
+.space-y-8 > * + * {
+  margin-top: 1.75rem !important;
+}
+
+/* Laptop-specific adjustments */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .universal-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .card-padding-laptop {
+    padding: 1.25rem !important;
+  }
+  
+  .gap-laptop {
+    gap: 1.25rem !important;
+  }
+}

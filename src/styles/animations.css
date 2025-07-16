@@ -1,0 +1,30 @@
+
+/* Animations */
+.animate-in {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-out {
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+/* Custom Background for light and dark modes */
+.light-theme-bg {
+  background-image: url('/lovable-uploads/238c4f84-5c49-476e-af5f-fc6f2322b912.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+}
+
+.dark-theme-bg {
+  background-image: url('/lovable-uploads/bd9129e1-bd5d-48ac-9e72-17ab2c5763f8.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
